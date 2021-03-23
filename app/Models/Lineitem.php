@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Lineitem extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['cart_id', 'product_id', 'quantity'];
 }

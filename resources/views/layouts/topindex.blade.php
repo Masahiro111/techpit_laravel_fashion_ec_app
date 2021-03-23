@@ -97,7 +97,7 @@
 
             <div class="order-1 md:order-2">
                 <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-                    href="#">
+                    href="{{ route('product.index')}}">
                     <svg class="fill-current text-gray-800 mr-2" xmlns="http://www.w3.org/2000/svg" width="24"
                         height="24" viewBox="0 0 24 24">
                         <path
@@ -118,7 +118,7 @@
                     </svg>
                 </a>
 
-                <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+                <a class="pl-3 inline-block no-underline hover:text-black" href="{{ route('cart.index') }}">
                     <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24">
                         <path
@@ -133,7 +133,7 @@
     </nav>
 
 
-
+    @if( Route::current()->uri() == '/')
     <!-- Alternatively if you want to just have a single hero -->
     <section class="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right"
         style="max-width:1600px; height: 32rem; background-image: url('https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
@@ -145,6 +145,7 @@
             </div>
         </div>
     </section>
+    @endif
 
     <section class="bg-white py-8">
 
@@ -158,7 +159,7 @@
                         Store
                     </a>
 
-                    <div class="flex items-center" id="store-nav-content">
+                    {{-- <div class="flex items-center" id="store-nav-content">
 
                         <a class="pl-3 inline-block no-underline hover:text-black" href="#">
                             <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -175,7 +176,7 @@
                             </svg>
                         </a>
 
-                    </div>
+                    </div> --}}
                 </div>
             </nav>
 

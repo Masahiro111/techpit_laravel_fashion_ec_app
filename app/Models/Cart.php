@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Cart extends Model
 {
     use HasFactory;
+
+    public function products()
+    {
+        return $this->belongsTomany(
+            Product::class,
+            'lineitems',
+        )->withPivot(['id', 'quantity']);
+    }
 }

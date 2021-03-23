@@ -7,7 +7,7 @@
 @section('content')
 
 @foreach ($products as $product)
-<div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+<div class="w-1/2 md:w-1/2 xl:w-1/4 p-6 flex flex-col">
     <a href="{{ route('product.show', $product->id) }}">
         <img class="hover:grow hover:shadow-lg" src="{{ asset($product->image) }}">
         <div class="pt-3 flex items-center justify-between">
